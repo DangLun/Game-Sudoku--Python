@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChienThang</class>
+ <widget class="QDialog" name="ChienThang">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>614</width>
+    <height>344</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>621</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #FFD700;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="btnChoiLai">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>250</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+font: 15pt &quot;Consolas&quot;;
+border: 3px solid black;
+border-radius: 10px;
+color: white;
+background-color: rgb(153,153,255);
+}
+
+QPushButton:hover{
+font: 15pt &quot;Consolas&quot;;
+border: 3px solid green;
+border-radius: 20px;
+color: white;
+background-color:rgb(102,255,178);
+}</string>
+    </property>
+    <property name="text">
+     <string>Chơi Mới</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbChienThang">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>160</y>
+      <width>320</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 15pt &quot;Consolas&quot;;
+color: green;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="src.qrc">:/newPrefix/icon/cooltext437840599315509 (1).png</pixmap>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnBangXepHang">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>250</y>
+      <width>201</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+font: 14pt &quot;Consolas&quot;;
+border: 3px solid black;
+border-radius: 10px;
+color: white;
+background-color: rgb(153,153,255);
+}
+
+QPushButton:hover{
+font: 14pt &quot;Consolas&quot;;
+border: 3px solid orange;
+border-radius: 20px;
+color: white;
+background-color: rgb(255, 204,153);
+}</string>
+    </property>
+    <property name="text">
+     <string>Bảng Xếp Hạng</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnThoat">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>250</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+font: 15pt &quot;Consolas&quot;;
+border: 3px solid black;
+border-radius: 10px;
+color: white;
+background-color: rgb(153,153,255);
+}
+
+QPushButton:hover{
+font: 15pt &quot;Consolas&quot;;
+border: 3px solid red;
+border-radius: 20px;
+color: white;
+background-color: rgb(255,102,102);
+}</string>
+    </property>
+    <property name="text">
+     <string>Thoát</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>180</width>
+      <height>120</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="src.qrc">:/newPrefix/icon/congratulation (1).png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>60</y>
+      <width>120</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="src.qrc">:/newPrefix/icon/balloon (1).png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>120</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="src.qrc">:/newPrefix/icon/fireworks (1).png</pixmap>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="src.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,1529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1190</width>
+    <height>803</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLineEdit{
+wigth: 50px;
+height: 50px;
+text-align: center;
+font: 75 15pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;
+}
+
+QLineEdit:focus{
+background-color: red;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btnshowKQ">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>190</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 15pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Xem kết quả</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>190</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+text-align: center;</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Dễ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Trung bình</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Khó</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Siêu Khó</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1171</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:48pt;&quot;&gt;SUDOKU&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbLine1">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>184</y>
+      <width>569</width>
+      <height>5</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:black;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbLine3">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>351</y>
+      <width>569</width>
+      <height>5</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:black;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbLine6">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>518</y>
+      <width>569</width>
+      <height>5</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:black;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbLine9">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>685</y>
+      <width>569</width>
+      <height>5</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:black;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbLine1_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>184</y>
+      <width>5</width>
+      <height>506</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:black;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbLine1_3">
+    <property name="geometry">
+     <rect>
+      <x>232</x>
+      <y>184</y>
+      <width>5</width>
+      <height>506</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:black;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbLine1_4">
+    <property name="geometry">
+     <rect>
+      <x>423</x>
+      <y>184</y>
+      <width>5</width>
+      <height>506</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:black;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbLine1_5">
+    <property name="geometry">
+     <rect>
+      <x>614</x>
+      <y>184</y>
+      <width>5</width>
+      <height>506</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:black;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnNewGame">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>250</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 15pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>New Game</string>
+    </property>
+    <property name="shortcut">
+     <string>Backspace</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnHideKQ">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>250</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 15pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Ẩn kết quả</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l30">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>356</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l27">
+    <property name="geometry">
+     <rect>
+      <x>552</x>
+      <y>297</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l74">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>631</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l11">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>243</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l19">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>297</y>
+      <width>63</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l5">
+    <property name="geometry">
+     <rect>
+      <x>299</x>
+      <y>189</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l4">
+    <property name="geometry">
+     <rect>
+      <x>237</x>
+      <y>189</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l6">
+    <property name="geometry">
+     <rect>
+      <x>361</x>
+      <y>189</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l2">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>189</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l21">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>297</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l10">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>243</y>
+      <width>63</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l3">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>189</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l20">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>297</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l12">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>243</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l8">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>189</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l13">
+    <property name="geometry">
+     <rect>
+      <x>237</x>
+      <y>243</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l9">
+    <property name="geometry">
+     <rect>
+      <x>552</x>
+      <y>189</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l7">
+    <property name="geometry">
+     <rect>
+      <x>428</x>
+      <y>189</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l79">
+    <property name="geometry">
+     <rect>
+      <x>428</x>
+      <y>631</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l17">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>243</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l16">
+    <property name="geometry">
+     <rect>
+      <x>428</x>
+      <y>243</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l15">
+    <property name="geometry">
+     <rect>
+      <x>361</x>
+      <y>243</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l80">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>631</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l14">
+    <property name="geometry">
+     <rect>
+      <x>299</x>
+      <y>243</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l22">
+    <property name="geometry">
+     <rect>
+      <x>237</x>
+      <y>297</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l24">
+    <property name="geometry">
+     <rect>
+      <x>361</x>
+      <y>297</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l23">
+    <property name="geometry">
+     <rect>
+      <x>299</x>
+      <y>297</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l25">
+    <property name="geometry">
+     <rect>
+      <x>428</x>
+      <y>297</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l18">
+    <property name="geometry">
+     <rect>
+      <x>552</x>
+      <y>243</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l1">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>189</y>
+      <width>63</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::WheelFocus</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l33">
+    <property name="geometry">
+     <rect>
+      <x>361</x>
+      <y>356</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l70">
+    <property name="geometry">
+     <rect>
+      <x>428</x>
+      <y>577</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l72">
+    <property name="geometry">
+     <rect>
+      <x>552</x>
+      <y>577</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l71">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>577</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l26">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>297</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l49">
+    <property name="geometry">
+     <rect>
+      <x>237</x>
+      <y>464</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l43">
+    <property name="geometry">
+     <rect>
+      <x>428</x>
+      <y>410</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l58">
+    <property name="geometry">
+     <rect>
+      <x>237</x>
+      <y>523</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l40">
+    <property name="geometry">
+     <rect>
+      <x>237</x>
+      <y>410</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l63">
+    <property name="geometry">
+     <rect>
+      <x>552</x>
+      <y>523</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l65">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>577</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l68">
+    <property name="geometry">
+     <rect>
+      <x>299</x>
+      <y>577</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l34">
+    <property name="geometry">
+     <rect>
+      <x>428</x>
+      <y>356</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l45">
+    <property name="geometry">
+     <rect>
+      <x>552</x>
+      <y>410</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l31">
+    <property name="geometry">
+     <rect>
+      <x>237</x>
+      <y>356</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l53">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>464</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l54">
+    <property name="geometry">
+     <rect>
+      <x>552</x>
+      <y>464</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l59">
+    <property name="geometry">
+     <rect>
+      <x>299</x>
+      <y>523</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l35">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>356</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l62">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>523</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l44">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>410</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l61">
+    <property name="geometry">
+     <rect>
+      <x>428</x>
+      <y>523</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l29">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>356</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l32">
+    <property name="geometry">
+     <rect>
+      <x>299</x>
+      <y>356</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l60">
+    <property name="geometry">
+     <rect>
+      <x>361</x>
+      <y>523</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l36">
+    <property name="geometry">
+     <rect>
+      <x>552</x>
+      <y>356</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l52">
+    <property name="geometry">
+     <rect>
+      <x>428</x>
+      <y>464</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l42">
+    <property name="geometry">
+     <rect>
+      <x>361</x>
+      <y>410</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l51">
+    <property name="geometry">
+     <rect>
+      <x>361</x>
+      <y>464</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l28">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>356</y>
+      <width>63</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l69">
+    <property name="geometry">
+     <rect>
+      <x>361</x>
+      <y>577</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l41">
+    <property name="geometry">
+     <rect>
+      <x>299</x>
+      <y>410</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l67">
+    <property name="geometry">
+     <rect>
+      <x>237</x>
+      <y>577</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l50">
+    <property name="geometry">
+     <rect>
+      <x>299</x>
+      <y>464</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l56">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>523</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l75">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>631</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l38">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>410</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l47">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>464</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l55">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>523</y>
+      <width>63</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l64">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>577</y>
+      <width>63</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l46">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>464</y>
+      <width>63</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l48">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>464</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l37">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>410</y>
+      <width>63</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l81">
+    <property name="geometry">
+     <rect>
+      <x>552</x>
+      <y>631</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l57">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>523</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l66">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>577</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l73">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>631</y>
+      <width>63</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l77">
+    <property name="geometry">
+     <rect>
+      <x>299</x>
+      <y>631</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l76">
+    <property name="geometry">
+     <rect>
+      <x>237</x>
+      <y>631</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l78">
+    <property name="geometry">
+     <rect>
+      <x>361</x>
+      <y>631</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="l39">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>410</y>
+      <width>62</width>
+      <height>54</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>110</y>
+      <width>431</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 26pt &quot;MS Shell Dlg 2&quot;;
+background-color: white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnUp">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>350</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="text">
+     <string>Lên</string>
+    </property>
+    <property name="shortcut">
+     <string>Up</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnRight">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>420</y>
+      <width>121</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="text">
+     <string>Phải</string>
+    </property>
+    <property name="shortcut">
+     <string>Right</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDown">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>480</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="text">
+     <string>Xuống</string>
+    </property>
+    <property name="shortcut">
+     <string>Down</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnLeft">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>420</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="text">
+     <string>Trái</string>
+    </property>
+    <property name="shortcut">
+     <string>Left</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1190</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>l1</tabstop>
+  <tabstop>l2</tabstop>
+  <tabstop>l3</tabstop>
+  <tabstop>l4</tabstop>
+  <tabstop>l5</tabstop>
+  <tabstop>l6</tabstop>
+  <tabstop>l7</tabstop>
+  <tabstop>l8</tabstop>
+  <tabstop>l9</tabstop>
+  <tabstop>l10</tabstop>
+  <tabstop>l11</tabstop>
+  <tabstop>l12</tabstop>
+  <tabstop>l13</tabstop>
+  <tabstop>l14</tabstop>
+  <tabstop>l15</tabstop>
+  <tabstop>l16</tabstop>
+  <tabstop>l17</tabstop>
+  <tabstop>l18</tabstop>
+  <tabstop>l19</tabstop>
+  <tabstop>l20</tabstop>
+  <tabstop>l21</tabstop>
+  <tabstop>l22</tabstop>
+  <tabstop>l23</tabstop>
+  <tabstop>l24</tabstop>
+  <tabstop>l25</tabstop>
+  <tabstop>l26</tabstop>
+  <tabstop>l27</tabstop>
+  <tabstop>l28</tabstop>
+  <tabstop>l29</tabstop>
+  <tabstop>l30</tabstop>
+  <tabstop>l31</tabstop>
+  <tabstop>l32</tabstop>
+  <tabstop>l33</tabstop>
+  <tabstop>l34</tabstop>
+  <tabstop>l35</tabstop>
+  <tabstop>l36</tabstop>
+  <tabstop>l37</tabstop>
+  <tabstop>l38</tabstop>
+  <tabstop>l39</tabstop>
+  <tabstop>l40</tabstop>
+  <tabstop>l41</tabstop>
+  <tabstop>l42</tabstop>
+  <tabstop>l43</tabstop>
+  <tabstop>l44</tabstop>
+  <tabstop>l45</tabstop>
+  <tabstop>l46</tabstop>
+  <tabstop>l47</tabstop>
+  <tabstop>l48</tabstop>
+  <tabstop>l49</tabstop>
+  <tabstop>l50</tabstop>
+  <tabstop>l51</tabstop>
+  <tabstop>l52</tabstop>
+  <tabstop>l53</tabstop>
+  <tabstop>l54</tabstop>
+  <tabstop>l55</tabstop>
+  <tabstop>l56</tabstop>
+  <tabstop>l57</tabstop>
+  <tabstop>l58</tabstop>
+  <tabstop>l59</tabstop>
+  <tabstop>l60</tabstop>
+  <tabstop>l61</tabstop>
+  <tabstop>l62</tabstop>
+  <tabstop>l63</tabstop>
+  <tabstop>l64</tabstop>
+  <tabstop>l65</tabstop>
+  <tabstop>l66</tabstop>
+  <tabstop>l67</tabstop>
+  <tabstop>l68</tabstop>
+  <tabstop>l69</tabstop>
+  <tabstop>l70</tabstop>
+  <tabstop>l71</tabstop>
+  <tabstop>l72</tabstop>
+  <tabstop>l73</tabstop>
+  <tabstop>l74</tabstop>
+  <tabstop>l75</tabstop>
+  <tabstop>l76</tabstop>
+  <tabstop>l77</tabstop>
+  <tabstop>l78</tabstop>
+  <tabstop>l79</tabstop>
+  <tabstop>l80</tabstop>
+  <tabstop>l81</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

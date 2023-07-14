@@ -1,0 +1,2397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1010</width>
+    <height>775</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sudoku</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="src.qrc">
+    <normaloff>:/newPrefix/icon/pastime.png</normaloff>:/newPrefix/icon/pastime.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLineEdit{
+font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+font-weight: bold;
+text-align: center;
+}
+QWidget#Form
+{border-image: url(:/newPrefix/icon/hn.jpg)
+}
+QStackedWidget{
+background-color: rgba(0, 0, 0, 0);
+}
+QWidget#page{
+background-color: rgba(0, 0, 0, 0);
+}
+QWidget#page_1{
+background-color: rgba(0, 0, 0, 0);
+}
+QWidget#page_2{
+background-color: rgba(0, 0, 0, 0);
+}
+QWidget#page_3{
+background-color: rgba(0, 0, 0, 0);
+}
+QWidget#page_4{
+background-color: rgba(0, 0, 0, 0);
+}</string>
+  </property>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1031</width>
+     <height>781</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="sizeIncrement">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QTableWidget{
+background-color: #99ffff;
+alternate-background-color: #ffccff;
+color: black;
+font: 15pt &quot;Consolas&quot;;
+}</string>
+   </property>
+   <property name="currentIndex">
+    <number>4</number>
+   </property>
+   <widget class="QWidget" name="page">
+    <property name="styleSheet">
+     <string notr="true">QWidget#page{
+border-image:url(:/newPrefix/L-u-i-C-u-Ph-n-C-nh-Ho-t-H-nh-Game-Truy-n.jpg_Q90.jpg_.webp);
+}</string>
+    </property>
+    <widget class="QLabel" name="lbSUDOKU">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>981</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/newPrefix/icon/Screenshot_2022-12-26_230003-removebg-preview.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnPlay">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>240</y>
+       <width>291</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font: 75 24pt &quot;Consolas&quot;;
+border-radius: 20px;
+border: 3px solid black;
+background-color: white;
+}
+
+QPushButton:hover{
+background-color: rgb(21,255,153);
+}</string>
+     </property>
+     <property name="text">
+      <string>Play Now</string>
+     </property>
+     <property name="icon">
+      <iconset resource="src.qrc">
+       <normaloff>:/newPrefix/icon/play.png</normaloff>:/newPrefix/icon/play.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnRating">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>350</y>
+       <width>291</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font: 75 24pt &quot;Consolas&quot;;
+border-radius: 20px;
+border: 3px solid black;
+background-color: white;
+}
+
+QPushButton:hover{
+background-color: red
+}</string>
+     </property>
+     <property name="text">
+      <string>Rating</string>
+     </property>
+     <property name="icon">
+      <iconset resource="src.qrc">
+       <normaloff>:/newPrefix/icon/rating.png</normaloff>:/newPrefix/icon/rating.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnAbout">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>460</y>
+       <width>291</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font: 75 24pt &quot;Consolas&quot;;
+border-radius: 20px;
+border: 3px solid black;
+background-color: white;
+}
+
+QPushButton:hover{
+background-color: rgb(255,255,102);
+}</string>
+     </property>
+     <property name="text">
+      <string>About</string>
+     </property>
+     <property name="icon">
+      <iconset resource="src.qrc">
+       <normaloff>:/newPrefix/icon/information.png</normaloff>:/newPrefix/icon/information.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnQuit">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>570</y>
+       <width>291</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::WheelFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font: 75 24pt &quot;Consolas&quot;;
+border-radius: 20px;
+border: 3px solid black;
+background-color: white;
+}
+
+QPushButton:hover{
+background-color: rgb(255,70,70);
+}</string>
+     </property>
+     <property name="text">
+      <string>Quit</string>
+     </property>
+     <property name="icon">
+      <iconset resource="src.qrc">
+       <normaloff>:/newPrefix/icon/cross.png</normaloff>:/newPrefix/icon/cross.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkbox_amnhac_home">
+     <property name="geometry">
+      <rect>
+       <x>790</x>
+       <y>710</y>
+       <width>201</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="sizeIncrement">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 15pt &quot;Consolas&quot;;
+border:2px solid black;
+border-radius: 10px;</string>
+     </property>
+     <property name="text">
+      <string>Bật Nhạc</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_1">
+    <property name="styleSheet">
+     <string notr="true">QWidget#page_1{
+border-image:url(:/newPrefix/L-u-i-C-u-Ph-n-C-nh-Ho-t-H-nh-Game-Truy-n.jpg_Q90.jpg_.webp);
+}</string>
+    </property>
+    <widget class="QLabel" name="lbSUDOKU_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>991</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">text-align: center;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/newPrefix/icon/Screenshot_2022-12-26_230003-removebg-preview.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="leTenNhanVat">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>350</y>
+       <width>441</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;Consolas&quot;;
+border-radius: 20px;
+border: 3px solid black;</string>
+     </property>
+     <property name="placeholderText">
+      <string>Nhập Tên Người Chơi</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnPrevious_index1">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>171</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font: 75 15pt &quot;Consolas&quot;;
+border-radius: 20px;
+border: 3px solid black;
+}
+
+QPushButton:hover{
+background-color: rgb(204,153,255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Trở Về</string>
+     </property>
+     <property name="icon">
+      <iconset resource="src.qrc">
+       <normaloff>:/newPrefix/icon/left-arrow.png</normaloff>:/newPrefix/icon/left-arrow.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnNext">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>450</y>
+       <width>171</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font: 75 15pt &quot;Consolas&quot;;
+border-radius: 20px;
+border: 2px solid black;
+background-color: rgb(102,255,255);
+}
+QPushButton:hover{
+background-color: rgb(108, 102, 255);
+color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string>Tiếp Tục</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="autoRepeatDelay">
+      <number>300</number>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkbox_amnhac_inputname">
+     <property name="geometry">
+      <rect>
+       <x>790</x>
+       <y>710</y>
+       <width>201</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="sizeIncrement">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 15pt &quot;Consolas&quot;;
+border:2px solid black;
+border-radius: 10px;</string>
+     </property>
+     <property name="text">
+      <string>Bật Nhạc</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_thongbao">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>290</y>
+       <width>541</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 20px;
+color: blue;
+text-align: center;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_2">
+    <property name="styleSheet">
+     <string notr="true">QWidget#page_2{
+border-image:url(:/newPrefix/L-u-i-C-u-Ph-n-C-nh-Ho-t-H-nh-Game-Truy-n.jpg_Q90.jpg_.webp);
+}</string>
+    </property>
+    <widget class="QLineEdit" name="l63">
+     <property name="geometry">
+      <rect>
+       <x>697</x>
+       <y>588</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l70">
+     <property name="geometry">
+      <rect>
+       <x>573</x>
+       <y>642</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l3">
+     <property name="geometry">
+      <rect>
+       <x>315</x>
+       <y>254</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l67">
+     <property name="geometry">
+      <rect>
+       <x>382</x>
+       <y>642</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l6">
+     <property name="geometry">
+      <rect>
+       <x>506</x>
+       <y>254</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l41">
+     <property name="geometry">
+      <rect>
+       <x>444</x>
+       <y>475</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l61">
+     <property name="geometry">
+      <rect>
+       <x>573</x>
+       <y>588</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l17">
+     <property name="geometry">
+      <rect>
+       <x>635</x>
+       <y>308</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l54">
+     <property name="geometry">
+      <rect>
+       <x>697</x>
+       <y>529</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l64">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>642</y>
+       <width>63</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l71">
+     <property name="geometry">
+      <rect>
+       <x>635</x>
+       <y>642</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbLine1">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>249</y>
+       <width>569</width>
+       <height>5</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:black;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l47">
+     <property name="geometry">
+      <rect>
+       <x>253</x>
+       <y>529</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l69">
+     <property name="geometry">
+      <rect>
+       <x>506</x>
+       <y>642</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l23">
+     <property name="geometry">
+      <rect>
+       <x>444</x>
+       <y>362</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l74">
+     <property name="geometry">
+      <rect>
+       <x>253</x>
+       <y>696</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l11">
+     <property name="geometry">
+      <rect>
+       <x>253</x>
+       <y>308</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l57">
+     <property name="geometry">
+      <rect>
+       <x>315</x>
+       <y>588</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l80">
+     <property name="geometry">
+      <rect>
+       <x>635</x>
+       <y>696</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l26">
+     <property name="geometry">
+      <rect>
+       <x>635</x>
+       <y>362</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l5">
+     <property name="geometry">
+      <rect>
+       <x>444</x>
+       <y>254</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l50">
+     <property name="geometry">
+      <rect>
+       <x>444</x>
+       <y>529</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l51">
+     <property name="geometry">
+      <rect>
+       <x>506</x>
+       <y>529</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l14">
+     <property name="geometry">
+      <rect>
+       <x>444</x>
+       <y>308</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l62">
+     <property name="geometry">
+      <rect>
+       <x>635</x>
+       <y>588</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l19">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>362</y>
+       <width>63</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l18">
+     <property name="geometry">
+      <rect>
+       <x>697</x>
+       <y>308</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l28">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>421</y>
+       <width>63</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnHideKQ">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>470</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font: 75 15pt &quot;Consolas&quot;;
+border-radius: 20px;
+border: 3px solid black;
+}
+
+QPushButton:hover{
+background-color: rgb(172,178,255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Ẩn kết quả</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l1">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>254</y>
+       <width>63</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>IBeamCursor</cursorShape>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::WheelFocus</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l72">
+     <property name="geometry">
+      <rect>
+       <x>697</x>
+       <y>642</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="clock">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>200</y>
+       <width>31</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 5px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="src.qrc">
+       <normaloff>:/newPrefix/icon/clock.png</normaloff>:/newPrefix/icon/clock.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l45">
+     <property name="geometry">
+      <rect>
+       <x>697</x>
+       <y>475</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l42">
+     <property name="geometry">
+      <rect>
+       <x>506</x>
+       <y>475</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l59">
+     <property name="geometry">
+      <rect>
+       <x>444</x>
+       <y>588</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l36">
+     <property name="geometry">
+      <rect>
+       <x>697</x>
+       <y>421</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l32">
+     <property name="geometry">
+      <rect>
+       <x>444</x>
+       <y>421</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l44">
+     <property name="geometry">
+      <rect>
+       <x>635</x>
+       <y>475</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l10">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>308</y>
+       <width>63</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l9">
+     <property name="geometry">
+      <rect>
+       <x>697</x>
+       <y>254</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l49">
+     <property name="geometry">
+      <rect>
+       <x>382</x>
+       <y>529</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l77">
+     <property name="geometry">
+      <rect>
+       <x>444</x>
+       <y>696</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l78">
+     <property name="geometry">
+      <rect>
+       <x>506</x>
+       <y>696</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l2">
+     <property name="geometry">
+      <rect>
+       <x>253</x>
+       <y>254</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l33">
+     <property name="geometry">
+      <rect>
+       <x>506</x>
+       <y>421</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l13">
+     <property name="geometry">
+      <rect>
+       <x>382</x>
+       <y>308</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnshowKQ">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>410</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font: 75 15pt &quot;Consolas&quot;;
+border-radius: 20px;
+border: 3px solid black;
+}
+
+QPushButton:hover{
+background-color: rgb(172,178,255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Xem kết quả</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbLine1_5">
+     <property name="geometry">
+      <rect>
+       <x>759</x>
+       <y>249</y>
+       <width>5</width>
+       <height>506</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:black;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l46">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>529</y>
+       <width>63</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l29">
+     <property name="geometry">
+      <rect>
+       <x>253</x>
+       <y>421</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbLine6">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>583</y>
+       <width>569</width>
+       <height>5</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:black;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l38">
+     <property name="geometry">
+      <rect>
+       <x>253</x>
+       <y>475</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l31">
+     <property name="geometry">
+      <rect>
+       <x>382</x>
+       <y>421</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l56">
+     <property name="geometry">
+      <rect>
+       <x>253</x>
+       <y>588</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnNewGame">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>350</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font: 75 15pt &quot;Consolas&quot;;
+border-radius: 20px;
+border: 3px solid black;
+}
+
+QPushButton:hover{
+background-color: rgb(172,178,255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Game Mới</string>
+     </property>
+     <property name="shortcut">
+      <string>Backspace</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>290</y>
+       <width>191</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox{
+font: 16pt &quot;MS Shell Dlg 2&quot;;
+text-align: center;
+border: 2px solid black;
+font: 75 15pt &quot;Consolas&quot;;
+}</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Dễ</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Trung bình</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Khó</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Siêu Khó</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLineEdit" name="l68">
+     <property name="geometry">
+      <rect>
+       <x>444</x>
+       <y>642</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbLine9">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>750</y>
+       <width>569</width>
+       <height>5</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:black;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l60">
+     <property name="geometry">
+      <rect>
+       <x>506</x>
+       <y>588</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l12">
+     <property name="geometry">
+      <rect>
+       <x>315</x>
+       <y>308</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l24">
+     <property name="geometry">
+      <rect>
+       <x>506</x>
+       <y>362</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::DefaultContextMenu</enum>
+     </property>
+     <property name="acceptDrops">
+      <bool>true</bool>
+     </property>
+     <property name="inputMask">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l73">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>696</y>
+       <width>63</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbLine1_2">
+     <property name="geometry">
+      <rect>
+       <x>185</x>
+       <y>249</y>
+       <width>5</width>
+       <height>506</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:black;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l22">
+     <property name="geometry">
+      <rect>
+       <x>382</x>
+       <y>362</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l21">
+     <property name="geometry">
+      <rect>
+       <x>315</x>
+       <y>362</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l39">
+     <property name="geometry">
+      <rect>
+       <x>315</x>
+       <y>475</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l8">
+     <property name="geometry">
+      <rect>
+       <x>635</x>
+       <y>254</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l58">
+     <property name="geometry">
+      <rect>
+       <x>382</x>
+       <y>588</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l40">
+     <property name="geometry">
+      <rect>
+       <x>382</x>
+       <y>475</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l52">
+     <property name="geometry">
+      <rect>
+       <x>573</x>
+       <y>529</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l65">
+     <property name="geometry">
+      <rect>
+       <x>253</x>
+       <y>642</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l20">
+     <property name="geometry">
+      <rect>
+       <x>253</x>
+       <y>362</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l7">
+     <property name="geometry">
+      <rect>
+       <x>573</x>
+       <y>254</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l53">
+     <property name="geometry">
+      <rect>
+       <x>635</x>
+       <y>529</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbLine3">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>416</y>
+       <width>569</width>
+       <height>5</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:black;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l81">
+     <property name="geometry">
+      <rect>
+       <x>697</x>
+       <y>696</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l27">
+     <property name="geometry">
+      <rect>
+       <x>697</x>
+       <y>362</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbLine1_3">
+     <property name="geometry">
+      <rect>
+       <x>377</x>
+       <y>249</y>
+       <width>5</width>
+       <height>506</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:black;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l79">
+     <property name="geometry">
+      <rect>
+       <x>573</x>
+       <y>696</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbLine1_4">
+     <property name="geometry">
+      <rect>
+       <x>568</x>
+       <y>249</y>
+       <width>5</width>
+       <height>506</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:black;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l16">
+     <property name="geometry">
+      <rect>
+       <x>573</x>
+       <y>308</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l76">
+     <property name="geometry">
+      <rect>
+       <x>382</x>
+       <y>696</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l75">
+     <property name="geometry">
+      <rect>
+       <x>315</x>
+       <y>696</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l37">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>475</y>
+       <width>63</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l55">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>588</y>
+       <width>63</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbTime">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>190</y>
+       <width>121</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+font: 20pt &quot;OCR A Extended&quot;;
+text-align: center;
+color:black;
+</string>
+     </property>
+     <property name="text">
+      <string>00:00</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l35">
+     <property name="geometry">
+      <rect>
+       <x>635</x>
+       <y>421</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l48">
+     <property name="geometry">
+      <rect>
+       <x>315</x>
+       <y>529</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l25">
+     <property name="geometry">
+      <rect>
+       <x>573</x>
+       <y>362</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l30">
+     <property name="geometry">
+      <rect>
+       <x>315</x>
+       <y>421</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l15">
+     <property name="geometry">
+      <rect>
+       <x>506</x>
+       <y>308</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l66">
+     <property name="geometry">
+      <rect>
+       <x>315</x>
+       <y>642</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l4">
+     <property name="geometry">
+      <rect>
+       <x>382</x>
+       <y>254</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l34">
+     <property name="geometry">
+      <rect>
+       <x>573</x>
+       <y>421</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="l43">
+     <property name="geometry">
+      <rect>
+       <x>573</x>
+       <y>475</y>
+       <width>62</width>
+       <height>54</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnPrevious_index2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>171</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font: 75 15pt &quot;Consolas&quot;;
+border-radius: 20px;
+border: 3px solid black;
+}
+
+QPushButton:hover{
+background-color: rgb(204,153,255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Trở Về</string>
+     </property>
+     <property name="icon">
+      <iconset resource="src.qrc">
+       <normaloff>:/newPrefix/icon/left-arrow.png</normaloff>:/newPrefix/icon/left-arrow.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbSUDOKU_page2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>90</y>
+       <width>591</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 20px;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/newPrefix/icon/Screenshot_2022-12-26_230003-removebg-preview.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnHinh">
+     <property name="geometry">
+      <rect>
+       <x>810</x>
+       <y>60</y>
+       <width>141</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="src.qrc">
+       <normaloff>:/newPrefix/icon/pastime.png</normaloff>:/newPrefix/icon/pastime.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBoxAmThanhNhac">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>700</y>
+       <width>201</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="sizeIncrement">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 15pt &quot;Consolas&quot;;
+border:2px solid black;
+border-radius: 10px;</string>
+     </property>
+     <property name="text">
+      <string>Bật Nhạc</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_3">
+    <widget class="QPushButton" name="btnPrevious_index3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>171</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font: 75 15pt &quot;Consolas&quot;;
+border-radius: 20px;
+border: 3px solid black;
+}
+
+QPushButton:hover{
+background-color: rgb(204,153,255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Trở Về</string>
+     </property>
+     <property name="icon">
+      <iconset resource="src.qrc">
+       <normaloff>:/newPrefix/icon/left-arrow.png</normaloff>:/newPrefix/icon/left-arrow.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textAbout">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>220</y>
+       <width>961</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Consolas&quot;;
+</string>
+     </property>
+     <property name="html">
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Consolas'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Sudoku là Game gồm một lưới 9 x 9 với các số xuất hiện trong một số ô vuông ngẫu nhiên. Mục tiêu của câu đố này là lấp đầy các ô vuông còn lại bằng cách dùng các số từ 1 - 9 chính xác một lần trên hàng, cột và 9 ô vuông trong lưới con 3 x 3.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbImage1">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>440</y>
+       <width>321</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>icon/rsz_1screenshot_2022-12-29_010841.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbImage2">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>440</y>
+       <width>321</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../../../Downloads/rsz_screenshot_2022-12-29_010853.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>100</y>
+       <width>251</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;Consolas&quot;;
+color: black;
+
+</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:48pt; font-weight:600;&quot;&gt;About&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:48pt; font-weight:600;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>90</y>
+       <width>121</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius:20px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="src.qrc">
+       <normaloff>:/newPrefix/icon/information.png</normaloff>:/newPrefix/icon/information.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>100</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_4">
+    <widget class="QPushButton" name="btnImagerating">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>80</y>
+       <width>181</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-radius: 20px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="src.qrc">
+       <normaloff>:/newPrefix/icon/rating.png</normaloff>:/newPrefix/icon/rating.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>150</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbRating">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>100</y>
+       <width>311</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 50pt &quot;Consolas&quot;;
+color: red;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rating&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="tableRating">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>270</y>
+       <width>1011</width>
+       <height>511</height>
+      </rect>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>1011</width>
+       <height>511</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="showGrid">
+      <bool>true</bool>
+     </property>
+     <property name="sortingEnabled">
+      <bool>false</bool>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="horizontalHeaderCascadingSectionResizes">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderHighlightSections">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderCascadingSectionResizes">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Tên Người Chơi</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Độ Khó</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Thời Gian</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Xếp Hạng</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Tình Trạng</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+    </widget>
+    <widget class="QPushButton" name="btnPrevious_index4">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>171</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+font: 75 15pt &quot;Consolas&quot;;
+border-radius: 20px;
+border: 3px solid black;
+}
+
+QPushButton:hover{
+background-color: rgb(204,153,255);
+}</string>
+     </property>
+     <property name="text">
+      <string>Trở Về</string>
+     </property>
+     <property name="icon">
+      <iconset resource="src.qrc">
+       <normaloff>:/newPrefix/icon/left-arrow.png</normaloff>:/newPrefix/icon/left-arrow.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="src.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,22 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>icon/cooltext437840599315509 (1).png</file>
+    <file>icon/balloon (1).png</file>
+    <file>icon/fireworks (1).png</file>
+    <file>icon/congratulation (1).png</file>
+    <file>icon/reward.png</file>
+    <file>icon/clock.png</file>
+    <file>icon/exchange.png</file>
+    <file>icon/cross.png</file>
+    <file>icon/data.txt</file>
+    <file>icon/information.png</file>
+    <file>icon/left-arrow.png</file>
+    <file>icon/pastime.png</file>
+    <file>icon/play.png</file>
+    <file>icon/rating.png</file>
+    <file>icon/rsz_1screenshot_2022-12-29_010841.png</file>
+    <file>icon/rsz_screenshot_2022-12-29_010853.png</file>
+    <file>icon/Screenshot_2022-12-26_230003-removebg-preview.png</file>
+    <file>icon/hn.jpg</file>
+  </qresource>
+</RCC>
